@@ -1,0 +1,168 @@
+libstring-escape-perl (2010.002-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ gregor herrmann ]
+  * debian/rules: switch order of arguments to dh.
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+
+  [ gregor herrmann ]
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Axel Beckert ]
+  * debian/copyright: migrate pre-1.0 format to 1.0 using "cme fix dpkg-
+    copyright"
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * Remove Jonathan Yu from Uploaders. Thanks for your work!
+  * Add Testsuite declaration for autopkgtest-pkg-perl.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ Niko Tyni ]
+  * Update to debhelper compat level 10
+  * Update to Standards-Version 4.1.3
+  * Update to dpkg source format 3.0 (quilt)
+  * Declare that the package does not need (fake)root to build
+
+ -- Niko Tyni <ntyni@debian.org>  Fri, 30 Mar 2018 11:41:04 +0300
+
+libstring-escape-perl (2010.002-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Use new short debhelper rules format
+  * Add myself to Uploaders and Copyright
+  * Standards-Version 3.8.4 (drop perl version dep)
+  * Rewrite control description
+  * Update patch because it no longer applied properly
+  * Delete test scripts not in upstream
+  * Add Test::Pod{,::Coverage} to B-D-I
+
+  [ gregor herrmann ]
+  * Add debian/README.source to document quilt usage, as required by
+    Debian Policy since 3.8.0.
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+  * debian/control: Added: ${misc:Depends} to Depends: field.
+  * Change my email address.
+  * debian/copyright: use DEP5 formatting.
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Mon, 08 Feb 2010 19:42:41 -0500
+
+libstring-escape-perl (2002.001-8) unstable; urgency=low
+
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza). Removed: XS-
+    Vcs-Svn fields.
+  * debian/rules:
+    - delete /usr/lib/perl5 only if it exists (closes: #467920)
+    - update based on dh-make-perl's templates
+  * debian/watch: use dist-based URL.
+  * Set Standards-Version to 3.7.3 (no changes).
+  * debian/copyright:
+    - point to specific download location instead of CPAN at large
+    - take copyright/license information from the module itself instead of
+      from the outdated README
+  * Add backslash.patch instead of adding the missing backslash directly to
+    Escape.pm; add quilt framework.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Wed, 12 Mar 2008 20:51:08 +0100
+
+libstring-escape-perl (2002.001-7) unstable; urgency=low
+
+  * Use $(CURDIR) [make] instead of $(PWD) [sh] to fix issues with sudo.
+  * Enable tests in debian/rules.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Sun,  1 Oct 2006 14:57:14 +0200
+
+libstring-escape-perl (2002.001-6) unstable; urgency=low
+
+  * Moved debhelper to Build-Depends.
+  * Set Standards-Version to 3.7.2 (no changes).
+  * Set Debhelper Compatibility Level to 5.
+  * Removed empty /usr/lib/perl5 from package.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Fri, 16 Jun 2006 17:02:51 +0200
+
+libstring-escape-perl (2002.001-5) unstable; urgency=low
+
+  * Fixed debian/watch
+
+ -- Gunnar Wolf <gwolf@debian.org>  Tue, 12 Apr 2005 19:49:12 -0500
+
+libstring-escape-perl (2002.001-4) unstable; urgency=low
+
+  * New maintainer - Debian Perl Group <pkg-perl-
+    maintainers@lists.alioth.debian.org> via Gunnar Wolf
+    <gwolf@debian.org> (Closes: #279803)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Sat,  4 Dec 2004 10:01:18 -0600
+
+libstring-escape-perl (2002.001-3) unstable; urgency=low
+
+  * New maintainer,
+  Closes: #235638
+
+ -- Stephen Zander <gibreel@debian.org>  Mon, 15 Mar 2004 20:32:45 -0800
+
+libstring-escape-perl (2002.001-2) unstable; urgency=low
+
+  * Recompiled for perl 5.8.
+
+ -- Christopher C. Chimelis <chris@debian.org>  Fri, 27 Aug 2002 03:05:51 -0400
+
+libstring-escape-perl (2002.001-1) unstable; urgency=low
+
+  * New upstream release.
+  * Upstream: Modified substitution regexes to
+    include /s modifier.
+  * Upstream: Folded in list2string/string2list
+    	      functions from String::Words.
+  * Upstream: Added test for String::Words
+    	      functionality.
+  * Upstream: Minor documentation cleanup.
+
+ -- Christopher C. Chimelis <chris@debian.org>  Fri, 21 Jun 2002 14:31:22 -0400
+
+libstring-escape-perl (1998.1204-3) unstable; urgency=low
+
+  * Updated build-depends.
+  * Updated standards and perl policy versions.
+
+ -- Christopher C. Chimelis <chris@debian.org>  Wed, 13 Feb 2002 17:45:32 -0500
+
+libstring-escape-perl (1998.1204-2) unstable; urgency=low
+
+  * Updated to new perl policy.
+  * Recompile to fix dependencies.
+
+ -- Christopher C. Chimelis <chris@debian.org>  Sun, 5 Mar 2001 00:36:15 -0500
+
+libstring-escape-perl (1998.1204-1) unstable; urgency=low
+
+  * First release.
+
+ -- Christopher C. Chimelis <chris@classnet.med.miami.edu>  Thu, 6 Jan 2000 20:12:55 -0500
